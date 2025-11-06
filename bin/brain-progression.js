@@ -26,6 +26,7 @@ const brainProgression = (userName) => {
     }
     return arr;
   };
+  console.log(`What number is missing in the progression?`);
   let i = 0;
   do {
     const num1 = getRandomIntInclusive(1, 100);
