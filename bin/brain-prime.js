@@ -51,6 +51,8 @@ const brainPrime = (userName) => {
     ++i;
     console.log(`Correct!`);
   } while (i < 3);
+
+  console.log(`Congratulations,${userName}!`);
 };
 
 brainPrime(userName);
