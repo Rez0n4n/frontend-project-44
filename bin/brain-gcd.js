@@ -33,8 +33,8 @@ const brainGcd = (userName) => {
     const num2 = getRandomIntInclusive(1, 100);
     const correctAnswer = nod(num1, num2);
     console.log(`Question: ${num1} ${num2}`);
-    let userAnswer = Number(readLineSync.question(`Your answer: `));
-    const ok = answerCheck(userAnswer, correctAnswer);
+    let userAnswer = readLineSync.question(`Your answer: `);
+    const ok = answerCheck(Number(userAnswer), correctAnswer);
     if (!ok) {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`

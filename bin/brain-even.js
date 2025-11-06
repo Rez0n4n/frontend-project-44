@@ -28,7 +28,7 @@ const brainEven = (userName) => {
     console.log(`Question: ${number}`);
     let userAnswer = readLineSync.question(`Your answer: `);
     let correctAnswer = checkingParity(number);
-    const ok = answerCheck(userAnswer, correctAnswer);
+    const ok = answerCheck(String(userAnswer), correctAnswer);
     if (!ok) {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`

@@ -33,8 +33,8 @@ const brainCalc = (userName) => {
       mathAction[getRandomIntInclusive(0, mathAction.length - 1)];
     const mathResult = ops[randomMathAction](number1, number2);
     console.log(`Question: ${number1} ${randomMathAction} ${number2}`);
-    let userAnswer = Number(readLineSync.question(`Your answer: `));
-    const ok = answerCheck(userAnswer, mathResult);
+    let userAnswer = readLineSync.question(`Your answer: `);
+    const ok = answerCheck(Number(userAnswer), mathResult);
     if (!ok) {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${mathResult}'.`

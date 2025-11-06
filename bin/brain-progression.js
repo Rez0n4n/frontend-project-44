@@ -35,8 +35,8 @@ const brainProgression = (userName) => {
     const correctAnswer = arr[num3];
     arr[num3] = "..";
     console.log(`Question: ${arr.join(" ")}`);
-    let userAnswer = Number(readLineSync.question(`Your answer: `));
-    const ok = answerCheck(userAnswer, correctAnswer);
+    let userAnswer = readLineSync.question(`Your answer: `);
+    const ok = answerCheck(Number(userAnswer), correctAnswer);
     if (!ok) {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
