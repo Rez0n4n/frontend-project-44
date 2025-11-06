@@ -45,7 +45,9 @@ const brainCalc = (userName) => {
     ++i;
     console.log(`Correct!`);
   } while (i < 3);
-  console.log(`Congratulations,${userName}!`);
+  if (i === 3) {
+    console.log(`Congratulations, ${userName}!`);
+  }
 };
 
 brainCalc(userName);
